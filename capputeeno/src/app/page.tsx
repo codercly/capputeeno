@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import FilterBar from '@/components/filter-bar'
-import ProductsList from '@/components/products-list'
+import {ProductsList} from '@/components/products-list'
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
 
 export default function Home() {
