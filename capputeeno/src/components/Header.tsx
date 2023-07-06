@@ -1,27 +1,27 @@
 "use client"
 
 import { styled } from "styled-components"
-import {  Saira_Stencil_One  } from 'next/font/google';
+import { Saira_Stencil_One } from 'next/font/google';
 import { PrimaryInputWSearchIcon } from "./primary-input";
 import { CartControl } from "./cart-control";
 import { useFilter } from "@/hooks/useFilter";
 
 
 
-const sairaStencil = Saira_Stencil_One({ 
+const sairaStencil = Saira_Stencil_One({
     weight: ['400'],
-    subsets: ['latin'] 
-  })
+    subsets: ['latin']
+})
 
-  interface HeaderProps {
+interface HeaderProps {
 
-  }
+}
 
 const TagHeader = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 160px;
+    padding: 12px 24px;
 
     > div {
         display: flex;
@@ -30,24 +30,37 @@ const TagHeader = styled.header`
         gap: 24px;
     }
 
+    @media(min-width: ${props => props.theme.desktopBreakPoint}){
+        padding: 20px 160px;
+
+    }
+
 `
 const Logo = styled.a`
     color: var(--logo-color);
     font-weight: 400;
-    font-size: 40px;
+    font-size: 24px;
     line-height: 150%;
+
+    @media(min-width:  ${props => props.theme.tabletBreakPoint}){
+        font-size: 24px;
+    }
+
+    @media(min-width:  ${props => props.theme.desktopBreakPoint}){
+        font-size: 40px;
+    }
 `
 
-export function Header(props : HeaderProps){
-    const {setSearch, search} = useFilter();
-    return(
+export function Header(props: HeaderProps) {
+    const { setSearch, search } = useFilter();
+    return (
         <TagHeader>
             <Logo className={sairaStencil.className}>Capputeeno</Logo>
             <div>
-                <PrimaryInputWSearchIcon 
-                value={search}
-                handleChange={setSearch}
-                placeholder="Procurando por algo específico?"/>
+                <PrimaryInputWSearchIcon
+                    value={search}
+                    handleChange={setSearch}
+                    placeholder="Procurando por algo específico?" />
                 <CartControl />
             </div>
         </TagHeader>

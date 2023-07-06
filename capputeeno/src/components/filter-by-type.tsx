@@ -19,12 +19,16 @@ const FilterItem = styled.li<FilterItemProps>`
     color: var(--text-dark);
     font-weight: ${props => props.selected ? '600' : '400'};
     text-align: center;
-    font-size: 16px;
+    font-size: 12px;
     font-family: inherit;
-    line-height: 22px;
+    line-height: 18px;
     text-transform: uppercase;
     cursor: pointer;
     border-bottom: ${props => props.selected ? '4px solid var(--orange-low)' : ''}
+    @media(min-width: ${props => props.theme.desktopBreakPoint}{
+        font-size: 16px;
+        line-height: 22px;
+    })
     
 `
 

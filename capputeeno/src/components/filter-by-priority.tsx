@@ -44,6 +44,7 @@ const PriorityFilter = styled.ul`
     z-index: 999;
     list-style: none;
     top: 100%;
+    right: 8px;
 
     li{
         color: var(--text-dark);
