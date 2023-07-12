@@ -9,7 +9,8 @@
   --text-dark-2: #41414D;
   --shapes-dark: #09090A;
   --shapes: #DCE2E6;
-  --bg-primary:#F0F0F5
+  --bg-primary:#F0F0F5;
+  --secondary-text: #617480;
 }
 
 *{
