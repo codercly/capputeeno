@@ -10,7 +10,7 @@ O desafio é implementar um e-commerce de venda de canecas e camisetas que dever
 - Pesquisa por nome do produto
 - Adicionar e remover produtos do carrinho
 -  Checkout
--  
+
 ## 🖥️ Instalação
 
 ### Frontend
